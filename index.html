@@ -7,7 +7,9 @@
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded artoolkit='sourceType: webcam;'>
        <a-sphere position='1 0.5 1' material='opacity: 0.5;'radius="0.1">
-         <a-animation attribute="position" from="1 0.5 1" to="-1 0.5 -1" dur="10000" repeat="indefinite"></a-animation>
+         <a-animation attribute="position" from="1 0.5 1" to="-1 0.5 -1" dur="50000" repeat="indefinite">
+           <a-animation attribute="position" from="-1 0.5 -1" to="1 -0.5 1" dur="50000"></a-animation>
+         </a-animation>
        </a-sphere>
        <a-sphere position='0 0 0'src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" segments-height="53" material='opacity: 1.0;'>
          <a-animation attribute="rotation"
