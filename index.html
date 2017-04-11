@@ -6,16 +6,22 @@
   </head>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded artoolkit='sourceType: webcam;'>
-       <a-sphere position='0 0 0'src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" segments-height="53" material='opacity: 1.0;'>
-         <a-sphere position='1 0.5 1' material='opacity: 0.5;'radius="0.1">
-         </a-sphere>
-         <a-animation attribute="rotation"
-                        dur="1000"
-                        fill="none"
-
-                        to="0 360 0"
-                        repeat="indefinite"></a-animation>
-       </a-sphere>
+      <a-sphere position='0 0 0' material='opacity: 0.7;'radius="1" color="#FF8F00">
+        <a-sphere position='1 1 1'src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.4" segments-height="53" material='opacity: 1.0;'>
+          <a-sphere position='1 0.5 1' material='opacity: 0.5;'radius="0.1">
+          </a-sphere>
+          <a-animation attribute="rotation"
+                         dur="100000"
+                         fill="forwards"
+                         to="0 360 0"
+                         repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-animation attribute="rotation"
+                       dur="500000"
+                       fill="forwards"
+                       to="360 0 0"
+                       repeat="indefinite"></a-animation>
+      </a-sphere>
        <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
   </body>
